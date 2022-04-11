@@ -1,0 +1,26 @@
+CREATE SCHEMA IF NOT EXISTS api;
+
+CREATE TABLE IF NOT EXISTS api.student (
+  id IDENTITY PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  surname VARCHAR(100) NOT NULL,
+  age INT NOT NULL,
+  mail VARCHAR(100) NOT NULL,
+  field_of_study VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS api.teacher (
+  id IDENTITY PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  surname VARCHAR(100) NOT NULL,
+  age INT NOT NULL,
+  mail VARCHAR(100) NOT NULL,
+  subject VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS api.students_teachers (
+  id IDENTITY PRIMARY KEY,
+  student_id INT NOT NULL,
+  teacher_id INT NOT NULL
+);
+
